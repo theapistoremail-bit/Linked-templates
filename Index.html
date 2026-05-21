@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Login Form | helpme_coder</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+        /* Estilos para asegurar que el video funcione como fondo de pantalla completo */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento no deseadas */
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Coloca el video detrás de todo el contenido */
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover; /* Asegura que el video cubra toda la pantalla sin distorsionarse */
+        }
+
+        /* Contenedor principal por si necesitas ajustar la posición del formulario glassmorphism */
+        .container {
+            position: relative;
+            z-index: 1; /* Asegura que el formulario quede por encima del video */
+        }
+    </style>
+</head>
+
+<body>
+
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="PixVerse_V6_Image_Text_360P_Hola_crea_por_favo 2.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <div class="container">
+        <form action="#">
+            <h2>Login-form</h2>
+            
+            <div class="input-field">
+                <input type="text" required />
+                <label>Enter email</label>
+            </div>
+            
+            <div class="input-field">
+                <input type="password" required />
+                <label>Enter password</label>
+            </div>
+            
+            <div class="forget">
+                <label for="Save-login">
+                    <input type="checkbox" id="Save-login" />
+                    <p>Save login information</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            
+            <button type="submit">Log In</button>
+            
+            <div class="Create-account">
+                <p>Don't have an account? <a href="#">Create account</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
